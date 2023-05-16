@@ -1,0 +1,14 @@
+.input {
+    padding: 9px 12px;
+    margin: 5px 8px;
+    background-color: var(--compose-input-background);
+    border: 1px solid var(--compose-input-border);
+    border-radius: 8px;
+}
+.input:focus{
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--app-background)
+}
