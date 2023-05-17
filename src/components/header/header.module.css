@@ -1,0 +1,32 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 'user message message message';
+    padding: 10px 0;
+}
+
+.wrapper_user {
+    grid-area: user;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-right: 1px solid var(--border-list);
+}
+.btns {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+.btn {
+    cursor: pointer;
+}
+
+.wrapper_msg {
+    grid-area: message;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
