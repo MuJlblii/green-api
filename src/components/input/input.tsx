@@ -2,12 +2,12 @@ import { DetailedHTMLProps, InputHTMLAttributes, ReactNode } from 'react';
 import style from './input.module.css';
 
 interface InputType extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>  {
-    type: 'api' | 'id';
+    typeOfData?: 'api' | 'id';
     onChangeHandler: React.Dispatch<React.SetStateAction<string>>;
     children?: ReactNode;
 }
 
-const Input = ({type, onChangeHandler, ...props} : InputType): JSX.Element => {
+const Input = ({typeOfData: type, onChangeHandler, ...props} : InputType): JSX.Element => {
 
     return (
         <input
