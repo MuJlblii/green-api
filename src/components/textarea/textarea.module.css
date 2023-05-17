@@ -1,0 +1,49 @@
+.wrapper {
+    display: flex;
+    width: 70vw;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.wrapper_input {
+    position: relative;
+    width: 95%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+div.edit {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    min-height: 40px;
+    max-height: 100px;
+    background: #fff;
+    border-radius: 15px;
+    overflow-y: scroll;
+    outline: none;
+}
+.btn {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    margin-right: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(var(--black-rgb),.2);
+    padding-right: 5px;
+  
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: rgba(var(--archived-chat-marker-rgb), 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(var(--archived-chat-marker-rgb), 0.8);; 
+}

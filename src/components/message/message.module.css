@@ -1,0 +1,52 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+.box {
+    max-width: 85%;
+    display: flex;
+    position: relative;
+}
+.content {
+    min-width: 100px;
+    border-radius: 7.5px;
+    color: var(--message-primary);
+    display: flex;
+    flex-direction: column;
+}
+.content_in {
+    border-top-left-radius: 0;
+    background-color: var(--compose-input-background);
+}
+.content_out {
+    border-top-right-radius: 0;
+    background-color: var(--outgoing-background);
+}
+.msg {
+    padding: 10px;
+    overflow-wrap: break-word;
+}
+.msg_in {
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+.msg_out {
+    padding-right: 10px;
+    justify-content: flex-end;
+}
+.msg__icon_in {
+    position: absolute;
+    left: -8px;
+    top: -4px;
+}
+.msg__icon_out {
+    position: absolute;
+    right: -8px;
+    top: -4px;
+}
+.time {
+    color: var(--message-time);
+    font-size: .6875rem;
+    align-self: flex-end;
+    padding: 0 10px 10px 0;
+}
