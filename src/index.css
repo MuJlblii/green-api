@@ -1,3 +1,28 @@
+:root {
+  --active-tab-marker: #008069;
+  --app-background: #f0f2f5;;
+  --app-background-dark: #eae6df;
+  --app-background-stripe: #00a884;
+  --border-list: #e9edef;
+  --compose-input-background: #fff;
+  --new-msg-input: 240, 242, 245;
+  --compose-input-background-focused: #d1f1fe;
+  --compose-input-border: #fff;
+  --message-primary: #111b21;
+  --message-time: #667781;
+  --outgoing-background: #d9fdd3;
+  --archived-chat-marker-rgb: 84,101,111;
+  --background-default-hover: #f5f6f6;
+  --secondary: #667781;
+  --intro-secondary: #667781;
+  --primary-title: #41525d;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
