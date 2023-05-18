@@ -27,7 +27,8 @@ const UserSidebar = observer(() => {
                     placeholder='Введите номер телефона'
                     onKeyDown={(e) => {
                         if (e.code === 'Enter' || e.code === 'NumpadEnter') {
-                            userStore.setCurrentIdChat(`${phoneNumber}@c.us`)
+                            userStore.setCurrentIdChat(`${phoneNumber}@c.us`);
+                            userStore.setCurrentNameChat();
                             userStore.setIsShowingSidebar();
                             setPhoneNumber('');
                         }
