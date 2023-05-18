@@ -12,7 +12,7 @@
     flex-grow: 1;
     flex-direction: column;
     position: relative;
-    align-items: start;
+    align-items: flex-start;
     gap: 10px;
     background: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
     width: 100%;

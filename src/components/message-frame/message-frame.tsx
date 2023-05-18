@@ -8,7 +8,7 @@ import Textarea from '../textarea/textarea';
 
 const MessageFrame = observer(
     () => {
-        const [time, setTime] = useState(10000);
+        const [time, ] = useState(10000);
         const {userStore: {idInstance, apiTokenInstance, currentIdChat}, messagesStore} = useStores();
         const messagesForRendering = messagesStore?.message?.filter((el) => el.chatId === currentIdChat );
 

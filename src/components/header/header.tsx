@@ -23,24 +23,26 @@ const Header = observer(() => {
                     <OptionsIcon className={style.btn} />
                 </div>
             </div>
-            <div className={style.wrapper_msg}>
-                <div className={style.btns}>
-                    <UserIcon width={40} height={40} className={style.btn} />
-                    <p className={style.btn}>
-                        {userStore.currentNameChat ? userStore.currentNameChat : userStore.currentIdChat?.slice(0,-5)}
-                    </p>
+            {userStore.currentIdChat && 
+                <div className={style.wrapper_msg}>
+                    <div className={style.btns}>
+                        <UserIcon width={40} height={40} className={style.btn} />
+                        <p className={style.btn}>
+                            {userStore.currentNameChat ? userStore.currentNameChat : userStore.currentIdChat?.slice(0,-5)}
+                        </p>
+                    </div>
+                    <div className={style.btns}>
+                        <SearchIcon className={style.btn} />
+                        <OptionsIcon
+                            className={style.btn}
+                            onClick={() => {
+                                userStore.setApiTokenInstance('');
+                                userStore.setIdInstanse('');
+                            }}
+                        />
+                    </div>
                 </div>
-                <div className={style.btns}>
-                    <SearchIcon className={style.btn} />
-                    <OptionsIcon
-                        className={style.btn}
-                        onClick={() => {
-                            userStore.setApiTokenInstance('');
-                            userStore.setIdInstanse('');
-                        }}
-                    />
-                </div>
-            </div>
+            }
         </div>
     )
 })
