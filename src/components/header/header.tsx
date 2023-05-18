@@ -7,10 +7,17 @@ import {ReactComponent as OptionsIcon} from '../../assets/svg/header-options.svg
 import {ReactComponent as SearchIcon} from '../../assets/svg/header-search.svg';
 import { useStores } from '../../store';
 import { observer } from 'mobx-react-lite';
+import { useEffect } from 'react';
 
 
 const Header = observer(() => {
-    const { userStore} = useStores();
+    const { userStore, messagesStore} = useStores();
+
+    useEffect(() => {
+        if (!userStore.currentNameChat && userStore.currentIdChat && messagesStore.message.length > 0) {
+            userStore.setCurrentNameChat(messagesStore.message.filter((el) => el.chatId === userStore.currentIdChat)[0].chatName);
+        }
+    }, [messagesStore.message, userStore]);
 
     return (
         <div className={style.wrapper}>
