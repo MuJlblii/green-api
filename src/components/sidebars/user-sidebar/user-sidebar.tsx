@@ -40,6 +40,7 @@ const UserSidebar = observer(() => {
                     message={el.messages[el.messages.length - 1]?.message ? el.messages[el.messages.length - 1]?.message : null}
                     timestamp={el.messages[el.messages.length - 1]?.timestamp ? el.messages[el.messages.length - 1]?.timestamp : null}
                     chatId={el.chatId}
+                    key={el.chatId}
                 />
             ))}
         </div>
