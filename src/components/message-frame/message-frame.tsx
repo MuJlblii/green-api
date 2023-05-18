@@ -20,15 +20,15 @@ const MessageFrame = observer(
                 timestamp: value.body.timestamp,
                 type: value.body.messageData?.textMessageData?.textMessage ? 'in' : 'out'
             }
-            const findedMsg = messagesStore.message.filter(el => el.chatId === exportMessage.chatId);
-            const notFindedMsg = messagesStore.message.filter(el => el.chatId !== exportMessage.chatId);
-            if (findedMsg.length > 0) {
-                findedMsg[0].messages.push(exportMessage)
+            const foundMsg = messagesStore.message.filter(el => el.chatId === exportMessage.chatId);
+            const notFoundMsg = messagesStore.message.filter(el => el.chatId !== exportMessage.chatId);
+            if (foundMsg.length > 0) {
+                foundMsg[0].messages.push(exportMessage)
             } else {
-                findedMsg.push({chatId: value.body.senderData.chatId, chatName: value.body.senderData.chatName, messages: [exportMessage]})
+                foundMsg.push({chatId: value.body.senderData.chatId, chatName: value.body.senderData.chatName, messages: [exportMessage]})
             }
 
-            return ([...notFindedMsg, ...findedMsg]);
+            return ([...notFoundMsg, ...foundMsg]);
         }, [messagesStore.message])
 
         useEffect(() => {
