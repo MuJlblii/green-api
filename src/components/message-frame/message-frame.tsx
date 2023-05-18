@@ -35,13 +35,15 @@ const MessageFrame = observer(
             async function FetchData() {
                 try {
                     const resp = await fetch(`https://api.green-api.com/waInstance${idInstance}/ReceiveNotification/${apiTokenInstance}`, {method: 'GET'});
-                    const data = await resp.json();
-                    if (data.receiptId) {
-                        await fetch(`https://api.green-api.com/waInstance${idInstance}/DeleteNotification/${apiTokenInstance}/${data.receiptId}`, {method: 'DELETE'});
-                    }
-                    if (data) {
-                        const updatedData = updateMessage(data);
-                        messagesStore.setMessage(updatedData);
+                    if (resp.status === 200) {
+                        const data = await resp.json();
+                        if (data?.receiptId) {
+                            await fetch(`https://api.green-api.com/waInstance${idInstance}/DeleteNotification/${apiTokenInstance}/${data.receiptId}`, {method: 'DELETE'});
+                        }
+                        if (data) {
+                            const updatedData = updateMessage(data);
+                            messagesStore.setMessage(updatedData);
+                        }
                     }
                 } catch (error) {
                     console.warn(error);
