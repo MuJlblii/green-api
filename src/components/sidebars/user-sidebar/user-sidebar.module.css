@@ -3,24 +3,26 @@
     flex-direction: column;
     height: 100%;
     position: relative;
+    background-color: var(--compose-input-background);
 }
 .slider {
+    z-index: 2;
     background-color: var(--compose-input-background);
     height: 100vh;
     position: absolute;
     width: 100%;
     transition: all 0.5s;
-    top: -92px;
+    top: -63px;
 }
 
 .slider_hidden {
     left: -800px;
 }
 .slider_showing {
-    left: 0px
+    left: 0;
 }
 .slider_header {
-    height: 100px;
+    height: 110px;
     background-color: var(--active-tab-marker);
     display: flex;
     align-items: flex-end;

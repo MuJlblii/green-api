@@ -2,6 +2,8 @@ import { useRef, useState } from 'react';
 import style from './textarea.module.css';
 import { useStores } from '../../store';
 import {ReactComponent as MsgSendIcon} from '../../assets/svg/msg-send.svg';
+import {ReactComponent as MsgSmileIcon} from '../../assets/svg/msg-smile.svg';
+import {ReactComponent as MsgFileIcon} from '../../assets/svg/msg-file.svg';
 
 const Textarea = () => {
     const [text, setText] = useState('');
@@ -42,6 +44,8 @@ const Textarea = () => {
 
     return (
         <div className={style.wrapper}>
+            <MsgSmileIcon className={style.btn} />
+            <MsgFileIcon className={style.btn} />
             <div className={style.wrapper_input}>
                 <div
                     ref={divRef}

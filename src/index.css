@@ -16,6 +16,8 @@
   --secondary: #667781;
   --intro-secondary: #667781;
   --primary-title: #41525d;
+  --panel-background-lighter: #f7f8fa;
+  --shadow-rgb: 11,20,26;
 }
 
 * {

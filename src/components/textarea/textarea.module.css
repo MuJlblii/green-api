@@ -1,6 +1,7 @@
 .wrapper {
     display: flex;
-    width: 70vw;
+    width: 100%;
+    padding: 0 25px 10px 25px;
     height: fit-content;
     justify-content: space-between;
     align-items: center;
@@ -8,13 +9,12 @@
 }
 .wrapper_input {
     position: relative;
-    width: 95%;
-    height: 100px;
+    flex-grow: 1;
+    width: 85%;
     display: flex;
     align-items: center;
 }
 div.edit {
-    position: absolute;
     width: 100%;
     padding: 10px;
     min-height: 40px;

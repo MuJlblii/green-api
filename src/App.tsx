@@ -35,35 +35,37 @@ const App = observer(() => {
 	}, [userStore.idInstance, userStore.apiTokenInstance])
 
 	return (
-		// <div className={style.wrapper}>
-			// <div className={style.header}></div>
-			<div className={style.app}>
-				{ !checkDataExist && 
-					<form
-					onSubmit={(e) => submitHandler(e)}
-					autoComplete='true'
-					className={style.form}
-					>
-					<Input typeOfData='id' placeholder='idInstance' onChangeHandler={setId}/>
-					<Input typeOfData='api' placeholder='apiTokenInstance' onChangeHandler={setApi}/>
-					<button type='submit' className={style.form_btn}>Войти</button>
-					</form>
-				}
-				{ checkDataExist &&
-					<>
-						<div className={style.header}>
-							<Header />
-						</div>
-						<div className={style.user}>
-							<UserSidebar />
-						</div>
-						<div className={style.message}>
-							<MessageSidebar />
-						</div>
-					</>
-				}
+		<div className={style.wrapper}>
+			<div className={style.app_wrapper}>
+				<div className={style.app}>
+
+					{ !checkDataExist && 
+						<form
+						onSubmit={(e) => submitHandler(e)}
+						autoComplete='true'
+						className={style.form}
+						>
+						<Input typeOfData='id' placeholder='idInstance' onChangeHandler={setId}/>
+						<Input typeOfData='api' placeholder='apiTokenInstance' onChangeHandler={setApi}/>
+						<button type='submit' className={style.form_btn}>Войти</button>
+						</form>
+					}
+					{ checkDataExist &&
+						<>
+							<div className={style.header}>
+								<Header />
+							</div>
+							<div className={style.user}>
+								<UserSidebar />
+							</div>
+							<div className={style.message}>
+								<MessageSidebar />
+							</div>
+						</>
+					}
 				</div>
-		// </div>
+			</div>
+		</div>
 	);
 })
 
