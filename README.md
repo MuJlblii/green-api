@@ -15,6 +15,6 @@ WhatsApp
 - The user sees the recipient's reply in the chat
 
 ### ScreenShots
-![2023-05-18_00-30-26](https://github.com/MuJlblii/green-api/assets/99878208/285d815b-adba-4bc4-98f7-b0fccd70ce1e)
-![2023-05-18_09-39-01](https://github.com/MuJlblii/green-api/assets/99878208/c2e1251f-94ea-4c95-ad0c-8630c10ad013)
-![2023-05-18_09-43-33](https://github.com/MuJlblii/green-api/assets/99878208/09d9e43e-2809-4c21-a92b-ce291c562c64)
+![2023-05-19_17-08-26](https://github.com/MuJlblii/green-api/assets/99878208/3a4830e7-f341-4154-955f-6807c9531f20)
+![2023-05-19_17-08-41](https://github.com/MuJlblii/green-api/assets/99878208/71487619-fd07-45fb-912c-8b88acb1d303)
+![2023-05-19_17-10-52](https://github.com/MuJlblii/green-api/assets/99878208/af754ed2-05f6-45f2-b9c6-867564abad0f)
